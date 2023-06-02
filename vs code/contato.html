@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Café do Bairro</title>
+  <style>
+    /* Estilos CSS para o cardápio */
+    .cardapio {
+      margin: 20px;
+      padding: 20px;
+      background: linear-gradient(68.15deg, #7a5a3aee 16.62%, #8E5D52 85.61%);
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    .item span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="cardapio">
+    <h1> Sobré Nós</h1>
+    <h2>Contato</h2>
+    <div class="item">
+      <span>Numero:</span><br>
+        <strong>(48)99999-9999</strong>
+    </div>
+    <div class="item">
+      <span>Email:</span><br>
+      <strong>cafedobairro@gmail.com</strong>
+    </div>
+    <div class="item">
+    <span>Endereço:</span><br>
+    <strong>Rua João Carlos II</strong>
+    </div>
+    <div class="item">
+      <span>Localização</span><br>
+      <a href="https://www.google.com.br/maps/place/Caf%C3%A9+Cultura/@-27.5447017,-48.5724664,13z/data=!4m10!1m2!2m1!1scafeteria!3m6!1s0x95274767c69021e7:0xb5d97068f79a62c1!8m2!3d-27.5447056!4d-48.5003662!15sCgljYWZldGVyaWFaCyIJY2FmZXRlcmlhkgELY29mZmVlX3Nob3CaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTRhbVZMWjJsblJSQULgAQA!16s%2Fg%2F11bw4708qv?entry=ttu">Clique aqui para saber mais sobre a localização</a>
+        </div>
+    <h2>Funcionarios</h2>
+    <div class="item">
+      <span>Seu Zé</span><br>
+      <img class="img-ballebot" src="seuze (2).jpg" alt="seuze">
+    </div>
+    <div class="item">
+      <span>Dona Maria</span><br>
+      <img class="img-ballebot" src="donama.jpg" alt="donamaria">
+    </div>
+    <div class="item">
+      <span>Priscila</span><br>
+      <img class="img-ballebot" src="caixa.jpg" alt="Balle Bot">
+    </div>
+    <h3 class="titulo-terciario">Inscreva-se para ficar por dentro de tudo que acontece no café do bairro</h3>
+<form id="newsletter-form">
+    <input type="text" id="name-input" placeholder="Seu nome" required>
+    <input type="email" id="email-input" placeholder="Seu e-mail" required>
+    <button type="submit">Inscrever-se</button>
+  </form>
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('name-input').value;
+      const email = document.getElementById('email-input').value;
+      saveSubscriberData(name, email);
+      document.getElementById('name-input').value = '';
+      document.getElementById('email-input').value = '';
+      alert('Inscrição realizada com sucesso! Obrigado por se inscrever.');
+    }
+  
+    function saveSubscriberData(name, email) {
+      // Implemente o código para enviar os dados para um servidor ou armazená-los localmente
+    }
+  
+    const newsletterForm = document.getElementById('newsletter-form');
+    newsletterForm.addEventListener('submit', handleFormSubmit);
+  </script>
+</body>
+
+</html>
